@@ -6,17 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022 | Hexo</title>
+  <title>GEM | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/index.html">
+  <meta name="description" content="《Heterogeneous Graph Neural Networks for Malicious Account Detection》——CIKM’18 GEM：Graph Embeddings for Malicious accounts  1. 概括​        针对恶意账户设备和行为聚集性，提出了GEM(Graph Embeddings for Malicious accounts)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GEM">
+<meta property="og:url" content="http://example.com/2022/03/15/GEM/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="《Heterogeneous Graph Neural Networks for Malicious Account Detection》——CIKM’18 GEM：Graph Embeddings for Malicious accounts  1. 概括​        针对恶意账户设备和行为聚集性，提出了GEM(Graph Embeddings for Malicious accounts)">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f(X,G)">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220315144229519.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220315144305269.png">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20220315153139576.png">
+<meta property="article:published_time" content="2022-03-15T06:13:24.000Z">
+<meta property="article:modified_time" content="2022-03-15T10:10:48.519Z">
 <meta property="article:author" content="Pear Cat">
+<meta property="article:tag" content="Graph Detection">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=f(X,G)">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -207,41 +217,195 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-GEM" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/03/15/GEM/" class="archive-article-date">
-        <time datetime="2022-03-15T06:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/03/15/GEM/" target="_blank">GEM</a>
   
+    <h1 class="article-title" itemprop="name">
+      GEM
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/03/15/GEM/" class="archive-article-date">
+        <time datetime="2022-03-15T06:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.4k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">11分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="《Heterogeneous-Graph-Neural-Networks-for-Malicious-Account-Detection》——CIKM’18"><a href="#《Heterogeneous-Graph-Neural-Networks-for-Malicious-Account-Detection》——CIKM’18" class="headerlink" title="《Heterogeneous Graph Neural Networks for Malicious Account Detection》——CIKM’18"></a>《Heterogeneous Graph Neural Networks for Malicious Account Detection》——CIKM’18</h1><hr>
+<p>GEM：Graph Embeddings for Malicious accounts</p>
+<hr>
+<h5 id="1-概括"><a href="#1-概括" class="headerlink" title="1. 概括"></a>1. 概括</h5><p>​        针对恶意账户设备和行为聚集性，提出了GEM(Graph Embeddings for Malicious accounts)系统：构建的账户-不同设备异构网络，以拓扑结构和行为特征作为输入直接学习图神经网络模型 <img src="https://www.zhihu.com/equation?tex=f(X,G)" alt="[公式]"> 。并且引入注意力机制，考虑不同类型设备的权重。</p>
+<ul>
+<li><p>设备聚集性</p>
+<p>设备聚合的基本思想是，如果一个帐户注册或登录相同的设备或一组共同的设备以及大量的其他帐户，那么这样的帐户将是可疑的。</p>
+<p>文中的设备是一个更广泛的范围，设备可以是一个IP地址、一个电话号码，甚至是facebook中的一个类似页面。使用的数据集收集了各种类型的设备，包括phone number，User Machine ID (UMID)，MAC address， IMSI (International Mobile Subscriber Identity)，APDID(Alipay Device ID)6 and TID)等</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20220315144229519.png" alt="image-20220315144229519"></p>
+</li>
+<li><p>活动聚集性</p>
+<p>如果共享公共设备的帐户分批运行，那么这些帐户是可疑的。我们可以简单地定义共享同一设备的两个帐户的活动的内积作为亲和力的度量，账户和账户之间的一致行为意味着高度的亲和力。</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20220315144305269.png" alt="image-20220315144305269"></p>
+</li>
+<li><p><strong>同质图</strong>中只有⼀种类型的节点和边（例如，只有朋友关系的社交网络），网络结构较为简单。因此，同质图神经网络通常只需要聚合单⼀类型的邻居来更新节点的表示即可。</p>
+</li>
+<li><p>真实世界中的图大部分都可以被自然地建模为<strong>异质图</strong>，每个节点或边有着不同的类型或活动。</p>
+</li>
+<li><p>动机：连通子图</p>
+<p>针对恶意账户的设备和行为聚集性，直观的做法是查找连通子图：</p>
+<ol>
+<li>构建账户-设备二部图</li>
+<li>将二部图转化为账户-账户之间关系图 ，并计算账户行为相似度作为权重。</li>
+<li>删除边，得到连通子图：相似度低于阈值的边删除，该阈值为超参，通过验证集进行调参。</li>
+<li>以连通子图大小作为风险Score。</li>
+</ol>
+<p>连通子图虽然会存在一些问题，如无法检测到位于规模较小的连通图的恶意账户，以及IP关联的账户会存在噪声等情况，但其思想可以借鉴：</p>
+<ol>
+<li>连通子图大小，其实等价使用sum算子对连通的邻居进行计数。</li>
+<li>通过行为相似度限制连通性。</li>
+<li>将原始账户-设备图转化成账户-账户图，通过相似度来约束连通性。通过这转化才能计算账户之间相似度，但会丢失信息</li>
+</ol>
+</li>
+<li></li>
+</ul>
+<h5 id="2-GEM-Model"><a href="#2-GEM-Model" class="headerlink" title="2. GEM Model"></a>2. GEM Model</h5><ul>
+<li><p>几个概念</p>
+<p>设备类型时间窗为 [0,T)（例如T为7天）<br>$$<br>d ∈ D<br>$$<br>边集合，若账户i在设备j上有行为（如注册、登录），则会形成边<br>$$<br>M&#x3D;{(i,j)}<br>$$<br>拓扑图<br>$$<br>G &#x3D; (V, E)<br>$$<br>节点（用户和设备）邻接矩阵<br>$$<br>A \in{0,1}^{N, N}<br>$$<br>异构图</p>
+<p>根据不同的设备类型，抽取|D|个子图，每个子图包含所有的节点，但只包含跟当前设备类型相关的边<br>$$<br>{G^{(d)}&#x3D;(V,E^{(d)})}<br>$$<br>相应的邻接矩阵<br>$$<br>{A^{(d)}}<br>$$<br>每个节点的特征抽取<br>$$<br>X\in R^{N,p+|D|}<br>$$<br>账户行为 在将时间窗[0,T)等分成p段，统计账户在每段的行为次数作为特征（p维），例如7天每小时为一段，则p&#x3D;7*24&#x3D;168。<br>设备类型one-hot编码：(|D|维)</p>
+<p><img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20220315153139576.png" alt="image-20220315153139576"></p>
+</li>
+<li><p>目标</p>
+<p>是给定(0, T]时间内的A和X， 以及(0, T-1]的真实标签<br>$$<br>y_i\in {-1,1}<br>$$<br>学习一个可以在时间T上有较好区分度的函数<br>$$<br>f({A^d},X)<br>$$</p>
+</li>
+<li><p>模型</p>
+<p>模型认为是GCN的变体，不同指出在于：1.扩展到异构网络;2.由于聚集性模式，对不同类型的图 G(d) 使用“sum”算子进行聚合操作，同时对不同设备图平均操作。</p>
+</li>
+<li><p>训练过程</p>
+<p>希望通过对每个节点i在<br>$$<br>{G^{(d)}&#x3D;(V,E^{(d)})}<br>$$<br>上传播行为X，从而学习到有效的节点嵌入<br>$$<br>H^{(0)} \leftarrow 0 \<br>\text { for } t&#x3D;1, \ldots, T \<br>\quad H^{(t)} \leftarrow \sigma\left(X \cdot W+\frac{1}{|\mathcal{D}|} \sum_{d&#x3D;1}^{|\mathcal{D}|} A^{(d)} \cdot H^{(t-1)} \cdot V_{d}\right)<br>$$<br>其中，<br>$$<br>H^{(t)} \in \mathbb{R}^{N, k}<br>$$<br>表示第t层embedding矩阵，第i行对应节点i的embedding i<br>$$<br>W \in \mathbb{R}^{P \times k} \<br>\left{V_{d}\right} \in \mathbb{R}^{k \times k}\<br>P &#x3D; p+|D|<br>$$<br>为参数</p>
+</li>
+<li><p>细节解释</p>
+<p>传播过程：上面等式 HV将将每个账户行为 [公式] 嵌入到隐向量中， 然后左层邻接矩阵A（ AHV ）表示对一跳邻居内邻居求和（加权平均）。</p>
+<p>在T次迭代后，本质上在每个节点上对T跳内邻居隐向量求和，与定义在连通子图上 求T步可达的邻居数量<br>$$<br>g(·)<br>$$<br>相似。 不同在于GEM应用于原始的账户-设备图，并通过拓扑上T步邻居行为嵌入求和，将对每个节点做emebdding。</p>
+</li>
+<li><p>目标函数<br>$$<br>L&#x3D;-\sum\left(y_{i} \log \sigma\left(u^{T} h_{i}\right)+\left(1-y_{i}\right) \log \left(1-\sigma\left(u^{T} h_{i}\right)\right)\right.L&#x3D;-\sum\left(y_{i} \log \sigma\left(u^{T} h_{i}\right)+\left(1-y_{i}\right) \log \left(1-\sigma\left(u^{T} h_{i}\right)\right)\right.<br>$$</p>
+</li>
+<li><p>Attention 机制</p>
+<p>对于不同类型的设备，可能会有不同的权重。</p>
+<p>引入注意力机制<br>$$<br>H^{(t)} \leftarrow \sigma\left(X \cdot W+\sum_{d \in \mathcal{D}} \operatorname{softmax}\left(\alpha_{d}\right) \cdot A^{(d)} \cdot H^{(t-1)} \cdot V_{d}\right)<br>$$</p>
+</li>
+</ul>
+<h5 id="3-代码"><a href="#3-代码" class="headerlink" title="3. 代码"></a>3. 代码</h5><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/safe-graph/DGFraud-TF2/tree/main/algorithms/GEM">https://github.com/safe-graph/DGFraud-TF2/tree/main/algorithms/GEM</a> </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># GEM Model</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GEM</span>(keras.Model):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, input_dim, output_dim, args</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line"></span><br><span class="line">        self.nodes_num = args.nodes_num</span><br><span class="line">        <span class="comment"># y.shape[1]</span></span><br><span class="line">        self.class_size = args.class_size</span><br><span class="line">        <span class="comment"># features.shape[1] 特征维度</span></span><br><span class="line">        self.input_dim = input_dim</span><br><span class="line">        self.output_dim = output_dim</span><br><span class="line">        self.device_num = args.device_num</span><br><span class="line">        self.hop = args.hop</span><br><span class="line">        self.zero_init = tf.keras.initializers.Zeros()</span><br><span class="line">        self.h_0 = tf.Variable(</span><br><span class="line">            initial_value=self.zero_init(</span><br><span class="line">                shape=(self.nodes_num, self.output_dim),</span><br><span class="line">                dtype=tf.float32)</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="comment"># GEM layers initialization</span></span><br><span class="line">        self.layers_ = []</span><br><span class="line">        self.input_layer = GEMLayer(self.nodes_num, self.input_dim,</span><br><span class="line">                                    self.output_dim, self.device_num)</span><br><span class="line">        <span class="comment"># hop 邻接节点搜索深度</span></span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(self.hop - <span class="number">1</span>):</span><br><span class="line">            self.layers_.append(</span><br><span class="line">                GEMLayer(self.nodes_num, self.input_dim, self.output_dim,</span><br><span class="line">                         self.device_num))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># logistic weights initialization</span></span><br><span class="line">        self.x_init = tf.keras.initializers.GlorotUniform()</span><br><span class="line">        self.u = tf.Variable(</span><br><span class="line">            initial_value=self.x_init(shape=(self.output_dim, self.class_size),</span><br><span class="line">                                      dtype=tf.float32), trainable=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">call</span>(<span class="params">self, inputs</span>):</span><br><span class="line"></span><br><span class="line">        <span class="string">&quot;&quot;&quot;:param inputs include support, x, label, mask</span></span><br><span class="line"><span class="string">        support means a list of the sparse adjacency Tensor</span></span><br><span class="line"><span class="string">        x means feature</span></span><br><span class="line"><span class="string">        label means label tensor</span></span><br><span class="line"><span class="string">        mask means a list of mask tensors to obtain the train data</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        supports, x, label, idx_mask = inputs</span><br><span class="line"></span><br><span class="line">        <span class="comment"># forward propagation</span></span><br><span class="line">        outputs = [self.input_layer((x, supports, self.h_0))]</span><br><span class="line">        <span class="keyword">for</span> layer <span class="keyword">in</span> self.layers_:</span><br><span class="line">            hidden = layer((x, supports, outputs[-<span class="number">1</span>]))</span><br><span class="line">            outputs.append(hidden)</span><br><span class="line">        gem_out = outputs[-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># get masked data</span></span><br><span class="line">        masked_data = tf.gather(gem_out, idx_mask)</span><br><span class="line">        masked_label = tf.gather(label, idx_mask)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Eq. (7) in paper</span></span><br><span class="line">        logits = tf.nn.softmax(tf.matmul(masked_data, self.u))</span><br><span class="line">        loss = -tf.reduce_sum(</span><br><span class="line">            tf.math.log(tf.nn.sigmoid(masked_label * logits)))</span><br><span class="line">        acc = accuracy(logits, masked_label)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> loss, acc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># GEM Layer</span></span><br><span class="line"><span class="comment"># 每个Layer对应一个hop</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GEMLayer</span>(layers.Layer):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    This layer equals to the equation (8) in</span></span><br><span class="line"><span class="string">    paper &#x27;Heterogeneous Graph Neural Networks</span></span><br><span class="line"><span class="string">    for Malicious Account Detection.&#x27;</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 带注意力机制的GEMLayer层</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, nodes_num, input_dim, output_dim, device_num, **kwargs</span>):</span><br><span class="line">        <span class="built_in">super</span>(GEMLayer, self).__init__(**kwargs)</span><br><span class="line"></span><br><span class="line">        self.nodes_num = nodes_num</span><br><span class="line">        self.input_dim = input_dim</span><br><span class="line">        self.output_dim = output_dim</span><br><span class="line">        self.device_num = device_num</span><br><span class="line">        self.W = self.add_weight(<span class="string">&#x27;weight&#x27;</span>, [input_dim, output_dim],</span><br><span class="line">                                 dtype=tf.float32)</span><br><span class="line">        self.V = self.add_weight(<span class="string">&#x27;V&#x27;</span>, [output_dim, output_dim],</span><br><span class="line">                                 dtype=tf.float32)</span><br><span class="line">        self.alpha = self.add_weight(<span class="string">&#x27;alpha&#x27;</span>, [self.device_num, <span class="number">1</span>],</span><br><span class="line">                                     dtype=tf.float32)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">call</span>(<span class="params">self, inputs</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :@param inputs: include x, support, h</span></span><br><span class="line"><span class="string">        x: the node feature</span></span><br><span class="line"><span class="string">        support: a list of the sparse adjacency Tensor</span></span><br><span class="line"><span class="string">        h: the hidden layer Tensor</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        x, support_, h = inputs</span><br><span class="line">        h1 = dot(x, self.W, sparse=<span class="literal">True</span>)</span><br><span class="line">        h2 = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> d <span class="keyword">in</span> <span class="built_in">range</span>(self.device_num):</span><br><span class="line">            ahv = dot(dot(support_[d], h, sparse=<span class="literal">True</span>), self.V, sparse=<span class="literal">False</span>)</span><br><span class="line">            h2.append(ahv)</span><br><span class="line"></span><br><span class="line">        h2 = tf.concat(h2, <span class="number">0</span>)</span><br><span class="line">        h2 = tf.reshape(h2, [self.device_num,</span><br><span class="line">                             self.nodes_num * self.output_dim])</span><br><span class="line">        h2 = tf.transpose(h2, [<span class="number">1</span>, <span class="number">0</span>])</span><br><span class="line">        h2 = tf.reshape(tf.matmul(h2, tf.nn.softmax(self.alpha)),</span><br><span class="line">                        [self.nodes_num, self.output_dim])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> tf.nn.relu(h1 + h2)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>训练结果</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">train_loss: 1720.7856, train_acc: 0.2469,val_loss: 432.2206,val_acc: 0.5521</span><br><span class="line">train_loss: 1717.9739, train_acc: 0.5988,val_loss: 431.3947,val_acc: 0.6933</span><br><span class="line">train_loss: 1714.4572, train_acc: 0.7577,val_loss: 430.2394,val_acc: 0.7178</span><br><span class="line">train_loss: 1709.6653, train_acc: 0.7793,val_loss: 428.6475,val_acc: 0.7239</span><br><span class="line">train_loss: 1703.1553, train_acc: 0.7793,val_loss: 426.5228,val_acc: 0.7117</span><br><span class="line">train_loss: 1694.4812, train_acc: 0.7762,val_loss: 423.8071,val_acc: 0.7178</span><br><span class="line">train_loss: 1683.3326, train_acc: 0.7762,val_loss: 420.5674,val_acc: 0.7239</span><br><span class="line">train_loss: 1669.7874, train_acc: 0.7778,val_loss: 416.9918,val_acc: 0.7301</span><br><span class="line">train_loss: 1654.5205, train_acc: 0.7809,val_loss: 413.4285,val_acc: 0.7301</span><br><span class="line">train_loss: 1638.9050, train_acc: 0.7840,val_loss: 410.2473,val_acc: 0.7301</span><br><span class="line">train_loss: 1624.5802, train_acc: 0.7917,val_loss: 407.6942,val_acc: 0.7546</span><br><span class="line">train_loss: 1612.8119, train_acc: 0.8009,val_loss: 405.8222,val_acc: 0.7791</span><br><span class="line">train_loss: 1604.0557, train_acc: 0.8071,val_loss: 404.5304,val_acc: 0.7730</span><br><span class="line">train_loss: 1597.8455, train_acc: 0.8148,val_loss: 403.5782,val_acc: 0.7669</span><br><span class="line">train_loss: 1588.0586, train_acc: 0.8565,val_loss: 401.4081,val_acc: 0.8221</span><br><span class="line">train_loss: 1581.7715, train_acc: 0.9151,val_loss: 399.8492,val_acc: 0.8528</span><br><span class="line">train_loss: 1574.3885, train_acc: 0.9506,val_loss: 398.4963,val_acc: 0.8896</span><br><span class="line">train_loss: 1568.9961, train_acc: 0.9614,val_loss: 398.1067,val_acc: 0.9080</span><br><span class="line">train_loss: 1568.8380, train_acc: 0.9614,val_loss: 397.9557,val_acc: 0.9018</span><br><span class="line">train_loss: 1569.0151, train_acc: 0.9506,val_loss: 397.3195,val_acc: 0.9080</span><br><span class="line">train_loss: 1566.1266, train_acc: 0.9599,val_loss: 396.8013,val_acc: 0.9080</span><br><span class="line">train_loss: 1562.8054, train_acc: 0.9691,val_loss: 396.6789,val_acc: 0.9018</span><br><span class="line">train_loss: 1560.8060, train_acc: 0.9676,val_loss: 396.8273,val_acc: 0.8896</span><br><span class="line">train_loss: 1559.8921, train_acc: 0.9691,val_loss: 397.0524,val_acc: 0.8834</span><br><span class="line">train_loss: 1559.3301, train_acc: 0.9691,val_loss: 397.1749,val_acc: 0.8773</span><br><span class="line">train_loss: 1558.6963, train_acc: 0.9738,val_loss: 397.1505,val_acc: 0.8834</span><br><span class="line">train_loss: 1558.0266, train_acc: 0.9769,val_loss: 396.9991,val_acc: 0.8834</span><br><span class="line">train_loss: 1557.4111, train_acc: 0.9784,val_loss: 396.8082,val_acc: 0.8896</span><br><span class="line">train_loss: 1556.8303, train_acc: 0.9784,val_loss: 396.6691,val_acc: 0.8957</span><br><span class="line">train_loss: 1556.2057, train_acc: 0.9830,val_loss: 396.5834,val_acc: 0.8957</span><br><span class="line">train_loss: 1555.5122, train_acc: 0.9846,val_loss: 396.4861,val_acc: 0.8957</span><br><span class="line">train_loss: 1554.8972, train_acc: 0.9861,val_loss: 396.3618,val_acc: 0.8957</span><br><span class="line">train_loss: 1554.4790, train_acc: 0.9877,val_loss: 396.2742,val_acc: 0.9018</span><br><span class="line">train_loss: 1554.3394, train_acc: 0.9892,val_loss: 396.2383,val_acc: 0.8957</span><br><span class="line">train_loss: 1554.3628, train_acc: 0.9877,val_loss: 396.2122,val_acc: 0.9018</span><br><span class="line">train_loss: 1554.3269, train_acc: 0.9861,val_loss: 396.1798,val_acc: 0.9018</span><br><span class="line">train_loss: 1554.1423, train_acc: 0.9877,val_loss: 396.1520,val_acc: 0.9018</span><br><span class="line">train_loss: 1553.8591, train_acc: 0.9877,val_loss: 396.1502,val_acc: 0.9018</span><br><span class="line">train_loss: 1553.5980, train_acc: 0.9892,val_loss: 396.1787,val_acc: 0.9018</span><br><span class="line">train_loss: 1553.4525, train_acc: 0.9892,val_loss: 396.2054,val_acc: 0.9018</span><br><span class="line">train_loss: 1553.3977, train_acc: 0.9877,val_loss: 396.2076,val_acc: 0.8957</span><br><span class="line">train_loss: 1553.3574, train_acc: 0.9877,val_loss: 396.1822,val_acc: 0.8957</span><br><span class="line">train_loss: 1553.3064, train_acc: 0.9892,val_loss: 396.1432,val_acc: 0.8957</span><br><span class="line"></span><br><span class="line">test_loss: 7858.3296, test_acc: 0.9239</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Pear Cat
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2022/03/15/GEM/" title="GEM" target="_blank">http://example.com/2022/03/15/GEM/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -253,83 +417,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/03/15/GEM/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/03/14/First/" class="archive-article-date">
-        <time datetime="2022-03-14T08:58:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-14</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/03/14/First/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">First</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/03/14/First/" target="_blank">First</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/03/14/hello-world/" class="archive-article-date">
-        <time datetime="2022-03-14T07:27:22.900Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/03/14/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
 
 
           </div>
@@ -370,8 +558,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
